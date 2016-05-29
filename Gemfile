@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gemspec
 
@@ -14,13 +14,12 @@ gem 'test-unit', '~> 3.0' if rails_version[0] == '3'
 if rails_version == '> 5.x'
   # Note: when updating this list, be sure to also update the README
   gem 'ransack',    github: 'activerecord-hackery/ransack'
-  gem 'kaminari',   github: 'amatsuda/kaminari', branch: '0-17-stable'
   gem 'draper',     github: 'audionerd/draper', branch: 'rails5', ref: 'e816e0e587'
   gem 'formtastic', github: 'justinfrench/formtastic'
   gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml' # drapergem/draper#697
   gem 'rack-mini-profiler', github: 'MiniProfiler/rack-mini-profiler'
   gem 'database_cleaner',  github: 'DatabaseCleaner/database_cleaner'
-  gem 'activerecord-jdbc-adapter', github: 'jruby/activerecord-jdbc-adapter', platforms: :jruby
+  # gem 'activerecord-jdbc-adapter', github: 'jruby/activerecord-jdbc-adapter', platforms: :jruby
 end
 
 gem 'mime-types', '< 3' # Remove this line when we drop support for Ruby 1.9
